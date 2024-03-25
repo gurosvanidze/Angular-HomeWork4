@@ -1,0 +1,54 @@
+<div class="wrapper" *ngIf="closeUser">
+  <header>
+    <div class="image-container">
+      <img
+        src="../../assets/user-Background.svg"
+        alt="user-Background"
+        class="user-Background"
+      />
+    </div>
+    <div class="login">
+      <img src="../../assets/Dummy_Logo.svg" alt="logo" />
+      <h5>Login into your account</h5>
+      <form [formGroup]="profileForm" (ngSubmit)="onFormSubmit()">
+        <div class="user-email">
+          <p>Email Id:</p>
+          <div class="focus">
+            <input
+              type="email"
+              formControlName="userEmail"
+              placeholder="info@provistechnologies.com"
+              class="email"
+            />
+            <img src="../../assets/mail.svg" alt="email" />
+          </div>
+        </div>
+        <div class="user-password">
+          <p>Password</p>
+          <div class="focus-on">
+            <input
+              type="password"
+              formControlName="userPassword"
+              placeholder="Enter your password"
+              class="password"
+            />
+            <div class="blue">
+              <img src="../../assets/password.svg" alt="password" />
+            </div>
+          </div>
+        </div>
+        <div class="recover-password">
+          <p>Forgot password?</p>
+          <input type="submit" value="Login now" />
+        </div>
+      </form>
+      <div class="separator">
+        <span></span>
+        <p>OR</p>
+        <span></span>
+      </div>
+      <button class="sign" (click)="onCloseUser()">Signup now</button>
+    </div>
+  </header>
+</div>
+<app-registration *ngIf="showRegistration"></app-registration>

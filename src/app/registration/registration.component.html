@@ -1,0 +1,171 @@
+<div class="wrapper">
+  <div class="sign-up">
+    <img src="../../assets/Dummy_Logo.svg" alt="aven logo" />
+    <h5>Sign up into your account</h5>
+    <form [formGroup]="userForm">
+      <div class="reg-forms">
+        <div class="registration">
+          <p>First Name :</p>
+          <input
+            type="text"
+            placeholder="Enter your name.."
+            formControlName="firstName"
+            class="firstname"
+          />
+          <div
+            class="error"
+            *ngIf="userName?.invalid && (userName?.dirty || userName?.touched)"
+          >
+            <p *ngIf="userName?.errors?.['required']">
+              First name is <span>required</span>
+            </p>
+            <p *ngIf="userName?.errors?.['minlength']">
+              The name is too <span>short</span>
+            </p>
+            <p *ngIf="userName?.errors?.['maxlength']">
+              The name is too <span>long</span>
+            </p>
+          </div>
+        </div>
+        <div class="registration">
+          <p>Last Name :</p>
+          <input
+            type="text"
+            placeholder="Enter your name.."
+            formControlName="lastName"
+          />
+          <div
+            class="error"
+            *ngIf="
+              userLastName?.invalid &&
+              (userLastName?.dirty || userLastName?.touched)
+            "
+          >
+            <p *ngIf="userLastName?.errors?.['required']">
+              Last name is <span>required</span>
+            </p>
+            <p *ngIf="userLastName?.errors?.['minlength']">
+              The name is too <span>short</span>
+            </p>
+            <p *ngIf="userLastName?.errors?.['maxlength']">
+              The name is too <span>long</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="reg-forms">
+        <div class="registration">
+          <p>Email Id :</p>
+          <input
+            type="email"
+            placeholder="info@xyz.com"
+            formControlName="email"
+          />
+          <div
+            class="error"
+            *ngIf="
+              userEmail?.invalid && (userEmail?.dirty || userEmail?.touched)
+            "
+          >
+            <p *ngIf="userEmail?.errors?.['required']">
+              Email is <span>required</span>
+            </p>
+            <p *ngIf="userEmail?.errors?.['email']">
+              Please enter a valid email address
+            </p>
+          </div>
+        </div>
+        <div class="registration">
+          <p>Mobile No. :</p>
+          <input
+            type="tel"
+            placeholder="995XXXXXXXXX"
+            formControlName="mobile"
+          />
+          <div
+            class="error"
+            *ngIf="
+              userMobile?.invalid && (userMobile?.dirty || userMobile?.touched)
+            "
+          >
+            <p *ngIf="userMobile?.errors?.['required']">
+              Mobile number is <span>required</span>
+            </p>
+            <p *ngIf="userMobile?.errors?.['pattern']">
+              Please enter your country number correctly
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="reg-forms">
+        <div class="registration">
+          <p>Password :</p>
+          <input
+            type="password"
+            placeholder="xxxxxxxxxx"
+            formControlName="password"
+          />
+          <div
+            class="error"
+            *ngIf="
+              userPassword?.invalid &&
+              (userPassword?.dirty || userPassword?.touched)
+            "
+          >
+            <p *ngIf="userPassword?.errors?.['required']">
+              Password is <span>required</span>
+            </p>
+            <p *ngIf="userPassword?.errors?.['minlength']">
+              Please enter over <span>6</span> symbol
+            </p>
+            <p *ngIf="userPassword?.errors?.['pattern']">
+              <span>a-Z and one punctuation mark.</span> required
+            </p>
+          </div>
+        </div>
+        <div class="registration">
+          <p>Confirm Password :</p>
+          <input
+            type="password"
+            placeholder="xxxxxxxxxx"
+            formControlName="confirm_password"
+            class="confirm"
+          />
+          <div
+            class="error"
+            *ngIf="userForm?.invalid && userForm?.errors?.['passwordNotMatch']"
+          >
+            <p>Password doesn't <span>match</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="registration">
+        <p>Company Name :</p>
+        <input
+          type="text"
+          placeholder="Enter company name..."
+          formControlName="company"
+        />
+        <div
+          class="error"
+          *ngIf="
+            userCompany?.invalid && (userCompany?.dirty || userCompany?.touched)
+          "
+        >
+          <p *ngIf="userCompany?.errors?.['required']">
+            Company name is <span>required</span>
+          </p>
+        </div>
+      </div>
+      <input
+        type="submit"
+        value="Sign up"
+        class="submit-all"
+        [disabled]="true"
+      />
+    </form>
+  </div>
+  <div class="sign-up-img">
+    <img src="../../assets/sign-up.svg" alt="girl" />
+  </div>
+</div>
