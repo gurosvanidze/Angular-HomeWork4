@@ -106,6 +106,7 @@ input.ng-dirty.ng-invalid {
   font-size: 16.16px;
   font-weight: 600;
   line-height: 24.23px;
+  transition: all 1s;
 }
 .submit-all:enabled {
   width: 214px;
@@ -119,4 +120,5 @@ input.ng-dirty.ng-invalid {
   font-weight: 600;
   line-height: 24.23px;
   cursor: pointer;
+  transition: all 1s;
 }
