@@ -75,7 +75,7 @@ input.ng-dirty.ng-invalid {
 .registration {
   width: 336px;
   height: 85px;
-  margin-bottom: 27px;
+  margin-bottom: 45px;
 }
 .registration p {
   width: 135.24px;
@@ -95,7 +95,19 @@ input.ng-dirty.ng-invalid {
 .error span {
   font-weight: 1000;
 }
-.submit-all {
+.submit-all:disabled {
+  width: 214px;
+  height: 50.49px;
+  border-radius: 8.08px;
+  background-color:#555555;
+  color: #ffffff;
+  box-shadow: 0px 12.116715431213379px 24.233430862426758px 0px #555555;
+  font-family: Poppins;
+  font-size: 16.16px;
+  font-weight: 600;
+  line-height: 24.23px;
+}
+.submit-all:enabled {
   width: 214px;
   height: 50.49px;
   border-radius: 8.08px;
@@ -106,4 +118,5 @@ input.ng-dirty.ng-invalid {
   font-size: 16.16px;
   font-weight: 600;
   line-height: 24.23px;
+  cursor: pointer;
 }

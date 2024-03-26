@@ -168,5 +168,19 @@ header {
   line-height: 24.23px;
   color: #1e2772;
   background-color: #ffffff;
+  transition: all ease 1s;
+}
+.sign:hover {
+  width: 429.13px;
+  height: 50.49px;
+  border-radius: 8.08px;
+  border: 1.01px solid #1e2772;
+  margin-top: 38px;
+  font-weight: 600;
+  font-size: 16.16px;
+  line-height: 24.23px;
+  color: #ffffff;
+  background-color: #1e2772;
   cursor: pointer;
+  transition: all ease 1s;
 }

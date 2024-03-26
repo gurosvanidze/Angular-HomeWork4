@@ -9,7 +9,6 @@ import { passwordConfirmationValidator } from '../validator/password-confirmatio
 })
 export class RegistrationComponent implements OnInit {
   userForm: FormGroup;
-  userLaName: any;
 
   constructor(private fb: FormBuilder) {
     this.userForm = this.fb.group(
@@ -47,7 +46,8 @@ export class RegistrationComponent implements OnInit {
     );
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
   get userName() {
     return this.userForm.get('firstName');
   }
