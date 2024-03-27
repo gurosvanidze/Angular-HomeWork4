@@ -66,4 +66,7 @@ export class RegistrationComponent implements OnInit {
   get userCompany() {
     return this.userForm.get('company');
   }
+  onSubmit() {
+    console.log(this.userForm.value);
+  }
 }

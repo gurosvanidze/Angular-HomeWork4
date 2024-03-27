@@ -2,7 +2,7 @@
   <div class="sign-up">
     <img src="../../assets/Dummy_Logo.svg" alt="aven logo" />
     <h5>Sign up into your account</h5>
-    <form [formGroup]="userForm">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
       <div class="reg-forms">
         <div class="registration">
           <p>First Name :</p>
