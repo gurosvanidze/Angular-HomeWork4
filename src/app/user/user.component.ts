@@ -24,7 +24,7 @@ export class UserComponent implements OnInit {
     this.profileForm.get('userEmail')?.setValue('');
     this.profileForm.get('userPassword')?.setValue('');
   }
-  //hide user show reg
+  //hide login show registration
   onCloseUser() {
     this.closeUser = !this.closeUser;
     this.showRegistration = !this.showRegistration;

@@ -129,13 +129,15 @@
             type="password"
             placeholder="xxxxxxxxxx"
             formControlName="confirm_password"
-            class="confirm"
           />
           <div
             class="error"
-            *ngIf="userForm?.invalid && userForm?.errors?.['passwordNotMatch']"
+            *ngIf="userConfirm_password?.invalid && (userConfirm_password?.dirty || userConfirm_password?.touched)"
           >
-            <p>Password doesn't <span>match</span></p>
+            <p *ngIf="userConfirm_password?.errors?.['passwordNotMatch']">Password doesn't <span>match</span></p>
+            <p *ngIf="userConfirm_password?.errors?.['required']">
+              Please enter confirm <span>Password</span>
+            </p>
           </div>
         </div>
       </div>

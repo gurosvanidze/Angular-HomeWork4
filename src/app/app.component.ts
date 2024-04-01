@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-HomeWork4';
+  showRegisterForm = false;
+  onRegisterClick() {
+    this.showRegisterForm = true;
+  }
 }

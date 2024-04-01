@@ -39,7 +39,7 @@ export class RegistrationComponent implements OnInit {
             Validators.pattern('^(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>]).+$'),
           ],
         ],
-        confirm_password: [''],
+        confirm_password: ['', Validators.required,],
         company: ['', Validators.required],
       },
       { validators: [passwordConfirmationValidator] }
@@ -62,6 +62,9 @@ export class RegistrationComponent implements OnInit {
   }
   get userPassword() {
     return this.userForm.get('password');
+  }
+  get userConfirm_password() {
+    return this.userForm.get('confirm_password')
   }
   get userCompany() {
     return this.userForm.get('company');
