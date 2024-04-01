@@ -137,12 +137,9 @@
           />
           <div
             class="error"
-            *ngIf="userConfirm_password?.invalid && (userConfirm_password?.dirty || userConfirm_password?.touched)"
+            *ngIf="userForm?.invalid && (userForm?.dirty || userForm?.touched) && userForm?.errors?.['passwordNotMatch']"
           >
-            <p *ngIf="userConfirm_password?.errors?.['passwordNotMatch']">Password doesn't <span>match</span></p>
-            <p *ngIf="userConfirm_password?.errors?.['required']">
-              Please, This field is <span>required</span>
-            </p>
+            <p>Password doesn't <span>match</span></p>
           </div>
         </div>
       </div>
