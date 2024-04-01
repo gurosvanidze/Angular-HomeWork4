@@ -37,6 +37,11 @@
 form {
   margin-top: 81px;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 input {
   width: 336px;
   height: 51px;
@@ -44,6 +49,7 @@ input {
   font-size: large;
   padding-left: 20.19px;
   margin-top: 10px;
+  
 }
 input::placeholder {
   width: 170.71px;
@@ -54,17 +60,14 @@ input::placeholder {
   line-height: 21.2px;
   color: #555555;
 }
-input.ng-valid {
+.recording.ng-valid {
   border-bottom: 3px solid rgb(94, 156, 177);
 }
-input.ng-touched.ng-invalid {
+.recording.ng-touched.ng-invalid {
   border-bottom: 1px solid rgb(216, 53, 53);
 }
-input.ng-dirty.ng-invalid {
+.recording.ng-dirty.ng-invalid {
   border-bottom: 1px solid rgb(216, 53, 53);
-}
-.confirm.ng-valid {
-  border: none;
 }
 .reg-forms {
   display: flex;
@@ -121,4 +124,10 @@ input.ng-dirty.ng-invalid {
   line-height: 24.23px;
   cursor: pointer;
   transition: all 1s;
+}
+.confirmation.ng-touched.ng-invalid {
+  border-bottom: 1px solid rgb(216, 53, 53);
+}
+.confirmation.ng-dirty.ng-invalid {
+  border-bottom: 1px solid rgb(216, 53, 53);
 }

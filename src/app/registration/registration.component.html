@@ -10,7 +10,7 @@
             type="text"
             placeholder="Enter your name.."
             formControlName="firstName"
-            class="firstname"
+            class="recording"
           />
           <div
             class="error"
@@ -33,6 +33,7 @@
             type="text"
             placeholder="Enter your name.."
             formControlName="lastName"
+            class="recording"
           />
           <div
             class="error"
@@ -60,6 +61,7 @@
             type="email"
             placeholder="info@xyz.com"
             formControlName="email"
+            class="recording"
           />
           <div
             class="error"
@@ -78,9 +80,10 @@
         <div class="registration">
           <p>Mobile No. :</p>
           <input
-            type="tel"
+            type="number"
             placeholder="995XXXXXXXXX"
             formControlName="mobile"
+            class="recording"
           />
           <div
             class="error"
@@ -104,6 +107,7 @@
             type="password"
             placeholder="xxxxxxxxxx"
             formControlName="password"
+            class="recording"
           />
           <div
             class="error"
@@ -129,6 +133,7 @@
             type="password"
             placeholder="xxxxxxxxxx"
             formControlName="confirm_password"
+            class="confirmation"
           />
           <div
             class="error"
@@ -136,7 +141,7 @@
           >
             <p *ngIf="userConfirm_password?.errors?.['passwordNotMatch']">Password doesn't <span>match</span></p>
             <p *ngIf="userConfirm_password?.errors?.['required']">
-              Please enter confirm <span>Password</span>
+              Please, This field is <span>required</span>
             </p>
           </div>
         </div>
@@ -147,6 +152,7 @@
           type="text"
           placeholder="Enter company name..."
           formControlName="company"
+          class="recording"
         />
         <div
           class="error"
