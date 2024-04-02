@@ -75,6 +75,9 @@ input::placeholder {
 .confirmation.ng-dirty.ng-invalid {
   border-bottom: 1px solid rgb(216, 53, 53);
 }
+.confirmation.ng-valid {
+  border-bottom: 3px solid rgb(94, 156, 177);
+}
 .reg-forms {
   display: flex;
   align-items: center;
